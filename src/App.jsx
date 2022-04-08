@@ -11,41 +11,33 @@ import Backdrop from "./components/Navigation/Backdrop/Backdrop";
 
 function App() {
   let backdrop;
-  
-  const [sideDrawerOpen,setSideDrawerOpen]=useState(false);
+
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
 
   const drawerToggleClickHandler = () => {
     setSideDrawerOpen(!sideDrawerOpen);
   };
 
   const backdropClickHandler = () => {
-        setSideDrawerOpen(false);
+    setSideDrawerOpen(false);
   };
 
   if (sideDrawerOpen) {
     backdrop = <Backdrop click={backdropClickHandler} />;
-    }
+  }
 
-    return (
-
-        
-        
-      <React.Fragment>
-        <Navigation
-          drawerClickHandler={drawerToggleClickHandler}
-        />
-        <SideDrawer
-          show={sideDrawerOpen}
-          click={backdropClickHandler}
-        />
-        ;{backdrop}
-        <Home />
-        <About />
-        <Experience />
-        <Work />
-        <Contact />
-      </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <Navigation drawerClickHandler={drawerToggleClickHandler} />
+      <SideDrawer show={sideDrawerOpen} click={backdropClickHandler} />;
+      {backdrop}
+      <Home />
+      <About />
+      <Experience />
+      <Work />
+      <Contact />
+    </React.Fragment>
+  );
 }
 
 export default App;
