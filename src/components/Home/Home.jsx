@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Fade from "react-reveal/Fade";
-import avatar from "../../assests/web-profileimage.jpg";
+import avatar from "../../assests/arbaz_photo.png";
 import Typewriter from "typewriter-effect";
 import Resume from "../../assests/Resume.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
